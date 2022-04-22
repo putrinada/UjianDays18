@@ -23,6 +23,7 @@ class RetrofitConfig {
             .build()
     }
    fun getLogin() = getRetrofit().create(login::class.java)
+   fun getAbsen() = getRetrofit().create(absen::class.java)
 
 
 

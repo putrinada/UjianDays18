@@ -9,51 +9,38 @@
     tools:context=".CheckinActivity">
 
     <LinearLayout
-        android:id="@+id/linearLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:orientation="vertical">
+        android:orientation="horizontal">
 
         <ImageButton
             android:id="@+id/btnCamera"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="top|center_vertical"
+            android:layout_height="match_parent"
             android:layout_weight="1"
-            app:srcCompat="@android:drawable/ic_menu_camera"
+            app:srcCompat="@drawable/ic_photo_camera_black_48dp"
             tools:ignore="SpeakableTextPresentCheck" />
     </LinearLayout>
 
     <LinearLayout
-        android:id="@+id/linearLayout2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_margin="20dp"
-        android:gravity="center"
         android:orientation="horizontal">
 
         <ImageView
             android:id="@+id/photo"
-            android:layout_width="236dp"
-            android:layout_height="195dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
             android:layout_weight="1"
             tools:srcCompat="@tools:sample/avatars" />
     </LinearLayout>
 
-    <LinearLayout
-        android:layout_width="match_parent"
+    <Button
+        android:id="@+id/btnLoginfoto"
+        android:layout_width="218dp"
         android:layout_height="wrap_content"
-        android:layout_margin="20dp"
-        android:orientation="horizontal">
-
-        <Button
-            android:id="@+id/button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Button" />
-    </LinearLayout>
+        android:layout_gravity="center"
+        android:text="Login  Foto Selfie" />
 
 </LinearLayout>
