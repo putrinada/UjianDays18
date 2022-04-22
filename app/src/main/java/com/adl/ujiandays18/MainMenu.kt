@@ -16,11 +16,15 @@ class MainMenu : AppCompatActivity() {
 
         })
         btnHistori.setOnClickListener({
+            val intent = Intent(this@MainMenu,HistoryActivity::class.java)
+            startActivity(intent)
 
 
         })
 
         btnLogout.setOnClickListener({
+            val intent = Intent(this@MainMenu,MainActivity::class.java)
+            startActivity(intent)
 
         })
 

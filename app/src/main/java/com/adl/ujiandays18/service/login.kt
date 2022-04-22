@@ -13,7 +13,6 @@ interface login {
     @FormUrlEncoded
     @Headers("X-Api-Key:36BEE1EAA95D4DC0317F64F0B9B811E2")
     @POST("api/ujianlogin/add")
-
     fun addData(@Field("username") username:String, @Field("password") password : String)
             : Call<ResponsePostLogin>
 }

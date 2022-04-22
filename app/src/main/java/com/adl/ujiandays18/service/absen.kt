@@ -1,6 +1,6 @@
 package com.adl.ujiandays18.service
 
-import com.adl.ujiandays18.model.AbsenResponse
+
 import com.adl.ujiandays18.model.ResponsePostAbsen
 import okhttp3.MultipartBody
 import okhttp3.RequestBody
@@ -12,7 +12,7 @@ interface absen {
     //ambil get
     @Headers("X-Api-Key:36BEE1EAA95D4DC0317F64F0B9B811E2")
     @GET("api/absen/all")
-    fun getAllAbsen(): Call<AbsenResponse>
+    fun getAllAbsen(): Call<ResponsePostAbsen>
 
     //post data
     @FormUrlEncoded

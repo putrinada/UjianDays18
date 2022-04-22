@@ -17,6 +17,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.UjianDays18">
         <activity
+            android:name=".HistoryActivity"
+            android:exported="false" />
+        <activity
             android:name=".CheckinActivity"
             android:exported="false" />
         <activity
