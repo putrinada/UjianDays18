@@ -1,17 +1,17 @@
 package com.adl.ujiandays18.model
-
+//STEP0.1
 import android.os.Parcelable
 import com.google.gson.annotations.SerializedName
 import kotlinx.android.parcel.Parcelize
 
 @Parcelize
-data class AbsenResponse(
+data class ResponseLogin(
 
 	@field:SerializedName("total")
 	val total: Int? = null,
 
 	@field:SerializedName("data")
-	val data: Data? = null,
+	val data: DataLogin? = null,
 
 	@field:SerializedName("message")
 	val message: String? = null,
@@ -21,30 +21,21 @@ data class AbsenResponse(
 ) : Parcelable
 
 @Parcelize
-data class AbsenItem(
+data class DataLogin(
 
-	@field:SerializedName("tanggalkeluar")
-	val tanggalkeluar: String? = null,
+	@field:SerializedName("ujianlogin")
+	val ujianlogin: List<UjianloginItem?>? = null
+) : Parcelable
 
-	@field:SerializedName("datafoto")
-	val datafoto: String? = null,
+@Parcelize
+data class UjianloginItem(
 
-	@field:SerializedName("tanggalmasuk")
-	val tanggalmasuk: String? = null,
-
-	@field:SerializedName("lokasi")
-	val lokasi: String? = null,
+	@field:SerializedName("password")
+	val password: String? = null,
 
 	@field:SerializedName("id")
 	val id: String? = null,
 
 	@field:SerializedName("username")
 	val username: String? = null
-) : Parcelable
-
-@Parcelize
-data class Data(
-
-	@field:SerializedName("absen")
-	val absen: List<AbsenItem?>? = null
 ) : Parcelable

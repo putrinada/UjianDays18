@@ -1,5 +1,6 @@
 package com.adl.ujiandays18
-
+//STEP 2
+import android.content.Context
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -10,24 +11,43 @@ class MainMenu : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main_menu)
 
+        val status = getSharedPreferences("absen ",Context.MODE_PRIVATE).getString("status"," ")!!
+        if(!status.equals("")){
+            txtStatus.setText("CHECK OUT")
+        }else{
+            txtStatus.setText("CHECK IN")
+        }
+
         btnCheckin.setOnClickListener({
-            val intent = Intent(this@MainMenu,CheckinActivity::class.java)
+            //jika di klik pindah ke Checkin
+            val intent : Intent = Intent(applicationContext,CheckinActivity::class.java)
             startActivity(intent)
 
         })
         btnHistori.setOnClickListener({
-            val intent = Intent(this@MainMenu,HistoryActivity::class.java)
+            //jika di klik pindah ke History
+            val intent : Intent = Intent(applicationContext,HistoryActivity::class.java)
             startActivity(intent)
 
 
         })
 
         btnLogout.setOnClickListener({
-            val intent = Intent(this@MainMenu,MainActivity::class.java)
-            startActivity(intent)
+            //selesai
+           finish()
 
         })
 
 
+    }
+
+    override fun onResume() {
+        super.onResume()
+        val status = getSharedPreferences("absen ",Context.MODE_PRIVATE).getString("status"," ")!!
+        if(!status.equals("")){
+            txtStatus.setText("CHECK OUT")
+        }else{
+            txtStatus.setText("CHECK IN")
+        }
     }
 }
